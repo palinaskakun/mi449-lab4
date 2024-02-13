@@ -1,4 +1,38 @@
-body {
+:root {
+    background: rgb(53, 53, 53);
+    --main-color: white;
+    --card-color: rgb(181,181,181);
+}
+
+h1 {
+    color: var(--main-color);
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 20vh;
+    gap: 20px
+}
+
+.module {
+    background: var(--card-color);
+    border-radius: 7%;
+}
+
+.module.one {
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+/* .module.two {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+} */
+
+
+
+/* body {
     font-family: Helvetica, sans-serif;
     color: #EAE8FF;
     background: #2D3142;
@@ -47,4 +81,4 @@ h1 strong {
 
 img.about {
     opacity: 0.5;
-}
+} */
