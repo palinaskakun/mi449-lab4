@@ -14,6 +14,7 @@
     --uranus-teal: rgb(155, 255, 232);
     --neptune-light-blue: rgb(139, 187, 255);
     --jupiter-gray: rgb(121, 99, 66);
+    --biggest-planet-w-h: 110px;
 }
 
 body {
@@ -38,7 +39,6 @@ main {
 .module.one {
     grid-column: 1/3;
     grid-row: 1/3;
-    
 }
 
 .module {
@@ -62,8 +62,6 @@ main {
     border-radius: 50%;
     margin-bottom: 1.25vw;
 }
-
-
 
 .planet h2 {
     font-weight: bold;
@@ -92,6 +90,8 @@ main {
 
 }
 
+/* Adjust other planet sizes and colors */
+
 .module.two .planet-circle {
     width: 70px; 
     height: 70px; 
@@ -116,14 +116,14 @@ main {
     
 }
 .module.six .planet-circle {
-    width: 110px; 
-    height: 110px; 
+    width: var(--biggest-planet-w-h); 
+    height: var(--biggest-planet-w-h); 
     background: linear-gradient(to bottom, var(--jupiter-gray), var(--mars-orange));
     
 }
 .module.seven .planet-circle {
-    width: 110px; 
-    height: 110px; 
+    width: var(--biggest-planet-w-h); 
+    height: var(--biggest-planet-w-h); 
     background: linear-gradient(to top right, var(--sun-yellow), var(--mercury-brown));
     
 }
@@ -134,8 +134,8 @@ main {
 }
 
 .module.nine .planet-circle {
-    width: 105px; 
-    height: 105px; 
+    width: var(--biggest-planet-w-h); 
+    height: var(--biggest-planet-w-h); 
     background: linear-gradient(to bottom, var(--neptune-light-blue), var(--earth-blue));
 }
 
