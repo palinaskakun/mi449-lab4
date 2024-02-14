@@ -1,18 +1,29 @@
 :root {
-    background: rgb(53, 53, 53);
-    --main-color: white;
+    --main-color: rgb(53, 53, 53);
     --card-color: rgb(181,181,181);
     --main-font: Helvetica, sans-serif;
+    --color-white: #ffffff;
+    --sun-yellow: rgb(248, 255, 107);
+    --sun-orange: rgb(223, 150, 4);
+    --mercury-gray: rgb(197, 171, 132);
+    --mercury-brown: rgb(107, 76, 29);
+    --mars-red: rgb(175, 35, 0);
+    --mars-orange: rgb(255, 179, 64);
+    --earth-blue: rgb(16, 87, 187);
+    --earth-green: rgb(0, 200, 0);
+    --uranus-teal: rgb(155, 255, 232);
+    --neptune-light-blue: rgb(139, 187, 255);
+    --jupiter-gray: rgb(121, 99, 66);
 }
 
 body {
     font-family: var(--main-font);
-    background-color: var(--background-color);
+    background-color: var(--main-color);
     padding: 20px;
 }
 
 h1 {
-    color: var(--main-color);
+    color: var(--color-white);
     font-size: 3em;
 }
 
@@ -20,13 +31,23 @@ main {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: 20vh;
-    gap: 20px;
+    gap: 2vw;
+    color: var(--main-color);
+}
+
+.module.one {
+    grid-column: 1/3;
+    grid-row: 1/3;
     
 }
 
 .module {
     background: var(--card-color);
-    border-radius: 7%;
+    border-radius: 5%;
+}
+
+.module:hover {
+    transform: scale(1.1);
 }
 
 .planet {
@@ -38,18 +59,11 @@ main {
 }
 
 .planet-circle {
-    width: 80px; /* Adjust size as needed */
-    height: 80px; /* Adjust size as needed */
     border-radius: 50%;
-    /* Add gradients and colors for each planet */
-    background: radial-gradient(circle, rgba(105, 94, 94, 0) 0%, rgba(164, 43, 43, 0) 47%, #0d0a0a 47%, #ff0000 100%);
-    margin-bottom: 10px;
+    margin-bottom: 1.25vw;
 }
 
-.module.one {
-    grid-column: 1/3;
-    grid-row: 1/3;
-}
+
 
 .planet h2 {
     font-weight: bold;
@@ -60,66 +74,68 @@ main {
     margin: 5px 0;
 }
 
+/* Adjust the Sun card */
+.module.one p {
+    font-size: 2vw;
+}
+
+.module.one h1 {
+    color: var(--main-color);
+    margin: 0;
+}
+
 .module.one .planet-circle {
-    width: 150px; /* Adjust size for the Sun */
-    height: 150px; /* Adjust size for the Sun */
-    color: black;
+    width: 220px; 
+    height: 220px; 
+    margin-bottom: 40px;
+    background: radial-gradient(circle, var(--sun-yellow) 0%, var(--sun-orange) 80%);
+
 }
 
-/* .module.two {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
-} */
-
-
-
-/* body {
-    font-family: Helvetica, sans-serif;
-    color: #EAE8FF;
-    background: #2D3142;
-    padding: 0 40px;
-    text-align: center;
+.module.two .planet-circle {
+    width: 70px; 
+    height: 70px; 
+    background: radial-gradient(circle, var(--mercury-gray) 0%, var(--mercury-brown) 80%);
 }
 
-nav {
-    margin: 40px auto 0 auto;
-    width: 250px;
-    border-radius: 50px;
-    background: #212431;
+.module.three .planet-circle {
+    width: 85px; 
+    height: 85px; 
+    background: radial-gradient(circle, var(--sun-yellow) 0%, var(--mercury-brown) 60%);
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
+.module.four .planet-circle {
+    width: 90px; 
+    height: 90px; 
+    background: radial-gradient(circle, var(--earth-green) 0%, var(--earth-blue) 60%);
+}
+.module.five .planet-circle {
+    width: 80px; 
+    height: 80px; 
+    background: radial-gradient(circle, var(--mars-orange) 0%, var(--mars-red) 60%);
+    
+}
+.module.six .planet-circle {
+    width: 110px; 
+    height: 110px; 
+    background: linear-gradient(to bottom, var(--jupiter-gray), var(--mars-orange));
+    
+}
+.module.seven .planet-circle {
+    width: 110px; 
+    height: 110px; 
+    background: linear-gradient(to top right, var(--sun-yellow), var(--mercury-brown));
+    
+}
+.module.eight .planet-circle {
+    width: 95px; 
+    height: 95px; 
+    background: linear-gradient(to right, var(--uranus-teal), var(--color-white));
 }
 
-nav ul li {
-    list-style-type: none;
-    margin: 0;
+.module.nine .planet-circle {
+    width: 105px; 
+    height: 105px; 
+    background: linear-gradient(to bottom, var(--neptune-light-blue), var(--earth-blue));
 }
 
-nav ul li a {
-    display: inline-block;
-    padding: 20px;
-    color: #EAE8FF;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-h1 {
-    font-size: 8em;
-    letter-spacing: -2px;
-}
-
-h1 strong {
-    background: rgb(34,193,195);
-    background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-img.about {
-    opacity: 0.5;
-} */
